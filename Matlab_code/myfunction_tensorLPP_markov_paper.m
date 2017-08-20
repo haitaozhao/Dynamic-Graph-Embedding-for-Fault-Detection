@@ -152,11 +152,11 @@ for wi=1:happen
     if XTt2(wi)>T2limit
         falseT2=falseT2+1;
     end
-    falserate_pca_T2=100*falseT2/happen;
+    falserate_DGE_T2=100*falseT2/happen;
     if XTSPE(wi)>SPElimit
         falseSPE=falseSPE+1;
     end
-    falserate_pca_SPE=100*falseSPE/happen;
+    falserate_DGE_SPE=100*falseSPE/happen;
 end
 
 %% Miss alarm rate and False alarm rate
@@ -170,12 +170,12 @@ for wi=happen+1:size(XTt2,2)
         missSPE=missSPE+1;
     end 
 end
-missrate_pca_T2=100*missT2/(size(XTt2,2)-happen);
-missrate_pca_SPE=100*missSPE/(size(XTt2,2)-happen);
+missrate_DGE_T2=100*missT2/(size(XTt2,2)-happen);
+missrate_DGE_SPE=100*missSPE/(size(XTt2,2)-happen);
  disp('----False alarm rate----');
-falserate_pca=[falserate_pca_T2 falserate_pca_SPE]
+falserate_DGE = [falserate_DGE_T2 falserate_DGE_SPE]
  disp('----Miss alarm rate----');
-missrate_pca=[missrate_pca_T2 missrate_pca_SPE]
+missrate_DGE = [missrate_DGE_T2 missrate_DGE_SPE]
 % toc
 
 %% Detection time
