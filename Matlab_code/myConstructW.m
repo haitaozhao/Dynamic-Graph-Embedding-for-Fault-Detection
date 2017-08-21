@@ -67,7 +67,7 @@ for i=1:col1
         if(i==j)
             phi=1;
         else
-            hi=0;
+            phi=0;
         end
         C(i,j)=alpha(i)*Z(i,j)+alpha(j)*Z(j,i)-alpha(i)*alpha(j)-alpha(i)*phi;
         if C(i,j)<=0
