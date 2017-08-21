@@ -14,10 +14,10 @@ for i=1:col1
    end   
 end
 
-beta = 1/col1^2 * sum(sum(D));
-beta = sqrt(beta);
-beta2 = 1/col1^2 * sum(sum(DD));
-beta2 = sqrt(beta2); 
+beta = 0.5/col1^2 * sum(sum(D));
+%beta = sqrt(beta);
+beta2 = 0.5/col1^2 * sum(sum(DD));
+%beta2 = sqrt(beta2); 
 %% Compute Equation (3)
 TempData = zeros(row1,1);
 for i = 1 : col1
@@ -67,7 +67,7 @@ for i=1:col1
         if(i==j)
             phi=1;
         else
-            hi=0;
+            phi=0;
         end
         C(i,j)=alpha(i)*Z(i,j)+alpha(j)*Z(j,i)-alpha(i)*alpha(j)-alpha(i)*phi;
         if C(i,j)<=0
