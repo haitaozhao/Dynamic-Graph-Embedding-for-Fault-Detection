@@ -6,7 +6,7 @@ close;
 clear all;
 happen=160;
 d00=importdata('d00.dat');
-d01=importdata('d01_te.dat');
+d01=importdata('d02_te.dat');
 X=d00';
 XT=d01;
 [X,mean,std]=zscore(X);
